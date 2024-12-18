@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://elysianglam.github.io/elysian_glam_agency/",
+  "homepage": "https://elysianglam.agency/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
