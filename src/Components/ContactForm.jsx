@@ -1,8 +1,11 @@
 import { Typewriter } from "react-simple-typewriter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons } from "../Constants/constants";
+import { useLanguage } from "../App/LanguageContext";
 
 const ContactForm = () => {
+  const { language } = useLanguage();
+
   return (
     <div
       style={{
@@ -16,7 +19,14 @@ const ContactForm = () => {
           style={{ fontFamily: "Oswald, sans-serif" }}
           className="message text-6xl  sm:text-7xl bg-primary-600 h-[180px] flex flex-col justify-center p-2 rounded-xl text-grayscale-200 text-center rounded-br-[0%] relative shadow-2xl"
         >
-          <Typewriter words={["Ждём тебя!", "Напиши нам!"]} loop={true} />
+          <Typewriter
+            words={
+              language === "en"
+                ? ["We're waiting for you!", "DM us!"]
+                : ["Ждём тебя!", "Напиши нам!"]
+            }
+            loop={true}
+          />
         </h2>
         &nbsp;
       </div>
@@ -28,7 +38,13 @@ const ContactForm = () => {
               icon={icons.faTelegram}
             />
           </a>
-          <a href="https://t.me/elysian_glam_agency" target="_blank" className="text-grayscale-200 text-2xl">@elysian_glam_agency</a>
+          <a
+            href="https://t.me/elysian_glam_agency"
+            target="_blank"
+            className="text-grayscale-200 text-2xl"
+          >
+            @elysian_glam_agency
+          </a>
           {/* <a href="https://www.instagram.com/" target="_blank">
             <FontAwesomeIcon
               className="text-9xl text-grayscale-50 hover:text-primary-400 hover:scale-[1.1] transition-all duration-75"

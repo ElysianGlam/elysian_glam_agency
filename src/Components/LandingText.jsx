@@ -1,6 +1,8 @@
 import { m, LazyMotion, domAnimation } from "framer-motion";
+import { useLanguage } from "../App/LanguageContext";
 
 const LandingText = () => {
+  const { language } = useLanguage();
   const name1 = "ELYSIAN";
   const name2 = "GLAM";
 
@@ -66,9 +68,7 @@ const LandingText = () => {
           id="repulse-span"
           style={{ fontFamily: "Playfair Display, sans-serif" }}
         >
-          <a href="#about">
-            <span className="text-primary-400">Модельное</span> Агенство
-          </a>
+          <a href="#about">{language === "en" ? "Agency" : "Агенство"}</a>
         </m.span>
       </LazyMotion>
     </div>

@@ -4,8 +4,11 @@ import ContactServices from "../Components/ContactServices";
 import ContactForm from "../Components/ContactForm";
 import GlobeComponent from "../Components/GlobeComponent";
 import SocialLinks from "../Components/SocialLinks";
+import { useLanguage } from "../App/LanguageContext";
 
 const Contact = () => {
+  const { language } = useLanguage();
+
   return (
     <div
       id="contact"
@@ -13,7 +16,12 @@ const Contact = () => {
     >
       <div className="w-full min-h-[800px] flex flex-col xl:w-[70%]">
         <div className="w-full">
-          <SectionTitle title="КОНТАКТЫ" subtitle="Оставайся на связи" />
+          <SectionTitle
+            title={language === "en" ? "CONTACTS" : "КОНТАКТЫ"}
+            subtitle={
+              language === "en" ? "Stay in touch" : "Оставайся на связи"
+            }
+          />
         </div>
         <div className="w-full flex justify-center items-center">
           <LazyMotion features={domAnimation} strict>

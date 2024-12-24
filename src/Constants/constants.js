@@ -81,6 +81,18 @@ const icons = {
 
 const introduction = {
   text: [
+    "Welcome to Elysian Glam!",
+
+    "Working with the Fansly promotion agency will allow you to fully focus on content while we recruit subscribers, purchase ads, promote accounts, create a personal brand, manage your social networks and monetize traffic. You create the content, we do the rest.",
+
+    "Since our foundation, we have been constantly improving our skills and expanding our knowledge in the modeling business. We strive to create unique and effective solutions for each model, integrating modern technologies and trends. Each of the models gets an individual approach, which allows them to occupy content niches and get into the top of Fansly.",
+
+    "We are always happy to cooperate. If you are interested in developing in this direction and making money, write to us and we will tell you more.",
+  ],
+};
+
+const introductionRu = {
+  text: [
     "Добро пожаловать в Elysian Glam!",
 
     "Сотрудничество с агенством по продвижению Fansly позволит вам полностью сосредоточиться на контенте, пока мы набираем подписчиков, закупаем рекламу, занимаемся раскруткой аккаунтов, создаем личный бренд, ведем ваши соцсети и монетизируем трафик. Вы создаете контент — мы делаем все остальное.",
@@ -124,66 +136,85 @@ const logo = {
 const prospects = [
   {
     id: "content-plan",
-    title: "Контент-планы",
+    title: "Content plans",
+    titleRu: "Контент-планы",
     icon: icons.faBusinessTime,
     description:
+      "Creating a content plan for Fansly and shared social networks, taking into account the personality of the model. Systematization and simplification of the workflow.",
+    descriptionRu:
       "Составление контент-плана для Fansly и общих социальных сетей с учётом индивидуальности модели. Систематизирование и упрощение рабочего процесса.",
   },
   {
     id: "involvement",
-    title: "Привлечение трафика",
+    title: "Attracting traffic",
+    titleRu: "Привлечение трафика",
     icon: icons.faHandshake,
     description:
+      "Using Instagram, TikTok, YouTube, Twitter, Reddit and Tinder simultaneously to reach as many potential fans as possible.",
+    descriptionRu:
       "Использование Instagram, TikTok, YouTube, Twitter, Reddit и Tinder одновременно для охватить как можно больше потенциальных поклонников.",
   },
   {
     id: "management",
-    title: "Управление аккаунтами",
+    title: "Account Management",
+    titleRu: "Управление аккаунтами",
     icon: icons.faDiceD6,
     description:
+      "Account management, content posting and activity on Fansly and all social networks, all communications are handled by your personal manager and our professional chaters.",
+    descriptionRu:
       "Управление аккаунтами, постинг контента и активность в Fansly и во всех социальных сетях, всеми коммуникациями занимается ваш личный менеджер и наши профессиональные чатеры.",
   },
   {
     id: "anon",
-    title: "Анонимность",
+    title: "Anonymity",
+    titleRu: "Анонимность",
     icon: icons.faUserSecret,
     description:
+      "We protect your anonymity by hiding and protecting personal information. Encrypted chats are used to communicate in the team.",
+    descriptionRu:
       "Мы защищаем вашу анонимность, скрывая и защищая личную информацию. Для общения в команде используются зашифрованные чаты.",
   },
   {
     id: "free-schedule",
-    title: "Свободный график",
+    title: "Free schedule",
+    titleRu: "Свободный график",
     icon: icons.faCalendarDays,
     description:
+      "Modern and remote work. You choose your own place and schedule of work. Use your creativity to come up with your own way of creating content. We'll take care of the rest.",
+    descriptionRu:
       "Современная и удаленная работа. Вы сами выбираете место и график работы. Используйте свой творческий потенциал, чтобы придумать свой собственный способ создания контента. Обо всем остальном позаботимся мы.",
   },
   {
     id: "easy-start",
-    title: "Лёгкий старт",
+    title: "Easy Start",
+    titleRu: "Лёгкий старт",
     icon: icons.faChartLine,
     description:
+      "At the initial stage, we provide you with all the necessary equipment and materials. We teach you how to create content, introduce you to the field, and follow trends.",
+    descriptionRu:
       "На начальном этапе мы предоставляем вам все необходимое оборудование и материалы. Обучаем созданию контента, знакомим со сферой, следим за трендами.",
   },
   {
     id: "producere",
-    title: "Продюсирование и реклама",
+    title: "Production and advertising",
+    titleRu: "Продюсирование и реклама",
     icon: icons.faRectangleAd,
     description:
+      "Producing, advertising, monetization of content = increased revenue. We set the frequency of publications, analyze the audience, build a promotion strategy, and analyze how much to spend on advertising.",
+    descriptionRu:
       "Продюсирование, реклама, монетизация контента = увеличенные доходы. Устанавливаем периодичность публикаций, анализируем аудиторию, строим стратегию продвижения, анализируем сколько потратить на рекламу.",
   },
   {
     id: "traits",
-    title: "Ты особенная",
+    title: "You are special",
+    titleRu: "Ты особенная",
     icon: icons.faChampagneGlasses,
     description:
+      'Height, weight, and body features don\'t matter to Fansly. We will find the very "highlight" that will set you apart from many thousands of authors, attract a large number of subscribers to your page, and, as a result, money.',
+    descriptionRu:
       "Рост, вес, особенности фигуры для Fansly не имеют никакого значения. Мы найдем ту самую «изюминку», которая выделит вас из многих тысяч авторов, привлечет на вашу страницу большое количество подписчиков, и, как следствие, денег.",
   },
 ];
-
-const markerSvg = `<svg viewBox="-4 0 36 36">
-    <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
-    <circle fill="black" cx="14" cy="14" r="7"></circle>
-  </svg>`;
 
 const N = 1;
 const globeData = [...Array(N).keys()].map(() => ({
@@ -196,12 +227,12 @@ const globeData = [...Array(N).keys()].map(() => ({
 export {
   media,
   introduction,
+  introductionRu,
   cases,
   inspiration,
   logos,
   logo,
   prospects,
-  markerSvg,
   globeData,
   icons,
 };

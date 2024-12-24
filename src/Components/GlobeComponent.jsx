@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import Globe from "react-globe.gl";
 import { globeTexture } from "../assets";
-import { globeData, markerSvg } from "../Constants/constants";
+import { globeData } from "../Constants/constants";
 
 const GlobeComponent = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -34,13 +34,11 @@ const GlobeComponent = () => {
         htmlElementsData={globeData}
         htmlElement={(d) => {
           const el = document.createElement("div");
-          el.innerHTML = markerSvg;
           el.style.color = d.color;
           el.style.width = `${d.size}px`;
 
           el.style["pointer-events"] = "auto";
           el.style.cursor = "pointer";
-          el.onclick = () => console.info(d);
           return el;
         }}
         atmosphereColor="#b57b77"

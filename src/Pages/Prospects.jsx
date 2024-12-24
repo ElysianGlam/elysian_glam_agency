@@ -4,8 +4,10 @@ import ProspectsCards from "../Components/ProspectsCards";
 import { useEffect, useState } from "react";
 import { prospects } from "../Constants/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLanguage } from "../App/LanguageContext";
 
 const Prospects = () => {
+  const { language } = useLanguage();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -28,7 +30,10 @@ const Prospects = () => {
     >
       <div className="w-full min-h-[800px] flex flex-col xl:w-[70%]">
         <div className="w-full">
-          <SectionTitle title="ПЕРСПЕКТИВЫ" subtitle="Что тебя ждёт" />
+          <SectionTitle
+            title={language === "en" ? "PROSPECTS" : "ПЕРСПЕКТИВЫ"}
+            subtitle={language === "en" ? "What awaits you" : "Что тебя ждёт"}
+          />
         </div>
         <>
           {windowWidth > 767 ? (
@@ -67,7 +72,7 @@ const Prospects = () => {
                         fontWeight: "bold",
                       }}
                     >
-                      {skill.title}
+                      {language === "en" ? skill.title : skill.titleRu}
                     </span>
                     <span
                       className="text-center bg-primary-600 text-grayscale-50 rounded-xl text-xl p-4"
@@ -76,7 +81,9 @@ const Prospects = () => {
                         fontWeight: "400",
                       }}
                     >
-                      {skill.description}
+                      {language === "en"
+                        ? skill.description
+                        : skill.descriptionRu}
                     </span>
                   </div>
                 </div>

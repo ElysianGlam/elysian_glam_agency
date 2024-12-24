@@ -1,6 +1,9 @@
+import { useLanguage } from "../../App/LanguageContext";
 import { logo } from "../../assets/index";
 
 const NavHeader = ({ handleClick }) => {
+  const { language } = useLanguage();
+
   return (
     <div className="w-full h-[200px] flex flex-col items-center justify-end gap-4 p-4 bg-grayscale-950">
       <a
@@ -19,7 +22,9 @@ const NavHeader = ({ handleClick }) => {
           ELYSIAN GLAM
         </span>
       </a>
-      <span className="text-sm text-grayscale-300">Модельное Агенство</span>
+      <span className="text-sm text-grayscale-300">
+        {language === "en" ? "Agency" : "Агенство"}
+      </span>
     </div>
   );
 };

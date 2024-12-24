@@ -1,15 +1,15 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { writeFileSync } from 'fs';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { writeFileSync } from "fs";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: "/",
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     emptyOutDir: true,
   },
   postBuild() {
-    writeFileSync('dist/CNAME', 'elysianglam.agency');
-  }
+    writeFileSync("dist/CNAME", "elysianglam.agency");
+  },
 });

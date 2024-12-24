@@ -8,9 +8,11 @@ import {
 } from "framer-motion";
 import { astroPath } from "../Constants/astroPath";
 import BgQuote from "./elements/BgQuote";
+import { useLanguage } from "../App/LanguageContext";
 
 const AstronautImage = () => {
   const [isInView, setIsInView] = useState(false);
+  const { language } = useLanguage();
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -27,7 +29,9 @@ const AstronautImage = () => {
   return (
     <div ref={ref} className="w-full h-full relative">
       <div className="w-full h-full astro-path">
-        <BgQuote text="всё возможно" />
+        <BgQuote
+          text={language === "en" ? "everything is possible" : "всё возможно"}
+        />
         <svg
           className="w-[90%] h-[90%] rotate-[-45deg]"
           xmlns="http://www.w3.org/2000/svg"

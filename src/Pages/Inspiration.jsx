@@ -1,8 +1,11 @@
 import SectionTitle from "../Components/SectionTitle";
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { inspiration } from "../Constants/constants";
+import { useLanguage } from "../App/LanguageContext";
 
 const Inspiration = () => {
+  const { language } = useLanguage();
+
   return (
     <div
       id="inspiration"
@@ -11,8 +14,12 @@ const Inspiration = () => {
       <div className="w-full min-h-[800px] flex flex-col xl:w-[70%]">
         <div className="w-full">
           <SectionTitle
-            title="ВДОХНОВЕНИЕ"
-            subtitle="Модели зарабатывающие миллионы"
+            title={language === "en" ? "INSPIRATION" : "ВДОХНОВЕНИЕ"}
+            subtitle={
+              language === "en"
+                ? "Models making millions"
+                : "Модели зарабатывающие миллионы"
+            }
           />
         </div>
         <div className="w-full h-full flex justify-center">

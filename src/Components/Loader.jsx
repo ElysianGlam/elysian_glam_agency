@@ -7,7 +7,7 @@ const Loader = () => {
         style={{ fontFamily: "Poppins, sans-serif" }}
         className="absolute text-primary-400 text-xl"
       >
-        VS
+        EG
       </span>
       <div className="loader"></div>
     </div>

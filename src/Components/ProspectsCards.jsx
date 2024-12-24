@@ -1,8 +1,11 @@
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { prospects } from "../Constants/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLanguage } from "../App/LanguageContext";
 
 const ProspectsCards = () => {
+  const { language } = useLanguage();
+
   return (
     <div className="flex">
       <LazyMotion features={domAnimation} strict>
@@ -36,7 +39,7 @@ const ProspectsCards = () => {
                   fontWeight: "bold",
                 }}
               >
-                {skill.title}
+                {language === "en" ? skill.title : skill.titleRu}
               </span>
               <span
                 className="text-center bg-primary-600 text-grayscale-50 rounded-xl text-xl p-4"
@@ -45,7 +48,7 @@ const ProspectsCards = () => {
                   fontWeight: "400",
                 }}
               >
-                {skill.description}
+                {language === "en" ? skill.description : skill.descriptionRu}
               </span>
             </div>
           </m.div>

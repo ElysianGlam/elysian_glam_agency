@@ -10,7 +10,13 @@ const SocialLinks = () => {
           icon={icons.faTelegram}
         />
       </a>
-      <a href="https://t.me/elysian_glam_agency" target="_blank" className="text-grayscale-200 text-2xl">@elysian_glam_agency</a>
+      <a
+        href="https://t.me/elysian_glam_agency"
+        target="_blank"
+        className="text-grayscale-200 text-2xl"
+      >
+        @elysian_glam_agency
+      </a>
       {/* <a href="https://www.instagram.com/" target="_blank">
         <FontAwesomeIcon
           className="text-3xl text-grayscale-50 hover:text-primary-400 hover:scale-[1.1] transition-all duration-75"

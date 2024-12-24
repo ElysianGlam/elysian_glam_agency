@@ -3,10 +3,12 @@ import ToggleButton from "../elements/ToggleButton";
 import NavHeader from "./NavHeader";
 import NavLinks from "./NavLinks";
 import SocialLinks from "../SocialLinks";
+import { useLanguage } from "../../App/LanguageContext";
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
   const navRef = useRef(null);
+  const { language, setLanguage } = useLanguage();
 
   const handleClick = () => {
     setIsActive(!isActive);
@@ -39,6 +41,14 @@ const NavBar = () => {
       }`}
     >
       <ToggleButton isActive={isActive} handleClick={handleClick} />
+      <div
+        onClick={() => setLanguage((prev) => (prev === "en" ? "ru" : "en"))}
+        className="bg-grayscale-900 rounded-xl w-[80px] h-[50px] absolute top-4 right-20 flex items-center justify-center cursor-pointer"
+      >
+        <p className="text-4xl text-grayscale-50">
+          {language === "en" ? "ENG" : "RUS"}
+        </p>
+      </div>
       <div
         className={`${
           isActive ? "flex flex-col w-full h-full" : "hidden"

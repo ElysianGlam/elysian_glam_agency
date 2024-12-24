@@ -1,8 +1,11 @@
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icons } from "../Constants/constants";
+import { useLanguage } from "../App/LanguageContext";
 
 const ContactServices = () => {
+  const { language } = useLanguage();
+
   return (
     <div
       className="w-full sm:w-[40%] h-full flex flex-col gap-4 justify-center"
@@ -19,7 +22,9 @@ const ContactServices = () => {
               className="w-[50px] h-full text-primary-400"
               icon={icons.faWindowRestore}
             />
-            <span>Продвижение аккаунта</span>
+            <span>
+              {language === "en" ? "Account promotion" : "Продвижение аккаунта"}
+            </span>
           </div>
         </m.div>
         <m.div
@@ -32,7 +37,7 @@ const ContactServices = () => {
               className="w-[50px] h-full text-primary-400"
               icon={icons.faBusinessTime}
             />
-            <span>Контент-Планы</span>
+            <span>{language === "en" ? "Content Plan" : "Контент-Планы"}</span>
           </div>
         </m.div>
         <m.div
@@ -45,7 +50,9 @@ const ContactServices = () => {
               className="w-[50px] h-full text-primary-400"
               icon={icons.faDollar}
             />
-            <span>Регулярный доход</span>
+            <span>
+              {language === "en" ? "Regular income" : "Регулярный доход"}
+            </span>
           </div>
         </m.div>
         <m.div
@@ -58,7 +65,9 @@ const ContactServices = () => {
               className="w-[50px] h-full text-primary-400"
               icon={icons.faDiceD6}
             />
-            <span>Менеджмент аккаунта</span>
+            <span>
+              {language === "en" ? "Account management" : "Менеджмент аккаунта"}
+            </span>
           </div>
         </m.div>
         <m.div
@@ -71,7 +80,9 @@ const ContactServices = () => {
               className="w-[50px] h-full text-primary-400"
               icon={icons.faBagShopping}
             />
-            <span>Обучение моделей</span>
+            <span>
+              {language === "en" ? "Model training" : "Обучение моделей"}
+            </span>
           </div>
         </m.div>
       </LazyMotion>
