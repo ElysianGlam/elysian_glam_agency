@@ -23,7 +23,7 @@ const NavHeader = ({ handleClick }) => {
         </span>
       </a>
       <span className="text-sm text-grayscale-300">
-        {language === "en" ? "Agency" : "Агенство"}
+        {language === "en" ? "Agency" : "Агентство"}
       </span>
     </div>
   );

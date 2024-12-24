@@ -68,7 +68,7 @@ const LandingText = () => {
           id="repulse-span"
           style={{ fontFamily: "Playfair Display, sans-serif" }}
         >
-          <a href="#about">{language === "en" ? "Agency" : "Агенство"}</a>
+          <a href="#about">{language === "en" ? "Agency" : "Агентство"}</a>
         </m.span>
       </LazyMotion>
     </div>
